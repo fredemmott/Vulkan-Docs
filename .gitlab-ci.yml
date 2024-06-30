@@ -31,7 +31,7 @@ terminology_check:
     # Nothing, all prerequisites are in the Docker image
   script:
     # Internal self-test of the check_spec_links script
-    - ( cd scripts && py.test-3 test*.py )
+    - ( cd scripts && pytest test*.py )
     - mkdir -p gen/out/checks
     # Generate a summary of problems for CI logs (if any)
     # Override CHECK_XREFS to avoid building a redundant HTML target at this stage

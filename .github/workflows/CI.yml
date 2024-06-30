@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Internal self-test of the check_spec_links script
-        run: py.test-3 test*.py
+        run: pytest test*.py
         working-directory: scripts
       - name: Generate a summary of problems for CI logs (if any)
         run: |

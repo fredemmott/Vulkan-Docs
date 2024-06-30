@@ -523,7 +523,7 @@ check-txtfiles:
 
 # Check for valid xrefs in the output html
 check-xrefs: $(HTMLDIR)/vkspec.html
-	$(SCRIPTS)/check_html_xrefs.py $(HTMLDIR)/vkspec.html
+	$(PYTHON) $(SCRIPTS)/check_html_xrefs.py $(HTMLDIR)/vkspec.html
 
 # Clean generated and output files
 
