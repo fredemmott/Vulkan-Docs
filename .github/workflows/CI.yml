@@ -22,7 +22,7 @@ jobs:
     # We now refer to the container by its SHA instead of the name, to prevent
     # caching problems when updating the image.
     # container: khronosgroup/docker-images:asciidoctor-spec
-    container: khronosgroup/docker-images@sha256:42123ba13792c4e809d037b69152c2230ad97fbf43b677338075ab9c928ab6ed
+    container: khronosgroup/docker-images@sha256:bd30a83285a2ea062598f053b5bd8ebc843e16c639c0e4cd88ab4bbb4e63ead3
 
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +32,7 @@ jobs:
   terminology-check:
     name: Run various checker scripts on the spec and XML sources
     runs-on: ubuntu-latest
-    container: khronosgroup/docker-images@sha256:42123ba13792c4e809d037b69152c2230ad97fbf43b677338075ab9c928ab6ed
+    container: khronosgroup/docker-images@sha256:bd30a83285a2ea062598f053b5bd8ebc843e16c639c0e4cd88ab4bbb4e63ead3
 
     steps:
       - uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
   spec-core:
     name: Build the core-only spec, to try and catch ifdef errors in extension markup
     runs-on: ubuntu-latest
-    container: khronosgroup/docker-images@sha256:42123ba13792c4e809d037b69152c2230ad97fbf43b677338075ab9c928ab6ed
+    container: khronosgroup/docker-images@sha256:bd30a83285a2ea062598f053b5bd8ebc843e16c639c0e4cd88ab4bbb4e63ead3
 
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
   spec-generate:
     name: Build the vulkan specification and generate any associated files (such as vulkan.h)
     runs-on: ubuntu-latest
-    container: khronosgroup/docker-images@sha256:42123ba13792c4e809d037b69152c2230ad97fbf43b677338075ab9c928ab6ed
+    container: khronosgroup/docker-images@sha256:bd30a83285a2ea062598f053b5bd8ebc843e16c639c0e4cd88ab4bbb4e63ead3
 
     steps:
       - uses: actions/checkout@v4
@@ -185,7 +185,7 @@ jobs:
   cts-framework-tests:
     name: Run Vulkan CTS framework tests to validate against XML changes
     runs-on: ubuntu-latest
-    container: khronosgroup/docker-images@sha256:42123ba13792c4e809d037b69152c2230ad97fbf43b677338075ab9c928ab6ed
+    container: khronosgroup/docker-images@sha256:bd30a83285a2ea062598f053b5bd8ebc843e16c639c0e4cd88ab4bbb4e63ead3
     continue-on-error: true
 
     steps:

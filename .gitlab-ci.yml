@@ -7,7 +7,7 @@
 # Refer to the container by its SHA instead of the name, to prevent
 # caching problems when updating the image.
 # image: khronosgroup/docker-images:asciidoctor-spec
-image: khronosgroup/docker-images@sha256:91a1b62399f9804e17110e89d85d62e90bc8d2ad7b94a329bee87784158368a9
+image: khronosgroup/docker-images@sha256:bd30a83285a2ea062598f053b5bd8ebc843e16c639c0e4cd88ab4bbb4e63ead3
 
 # Specify which gitlab runner to use
 default:
